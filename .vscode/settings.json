@@ -1,0 +1,25 @@
+{
+    "files.exclude": {
+        "**/*.o": true,
+        "**/*.map": true,
+        "**/*.iso": true,
+        "**/*.bin": true,
+        "**/*.cue": true,
+        "**/*.raw": true,
+        "**/*.elf": true
+    },
+    "files.watcherExclude": {
+        "**/*.o": true,
+        "**/*.map": true,
+        "**/*.iso": true,
+        "**/*.bin": true,
+        "**/*.cue": true,
+        "**/*.elf": true
+    },
+    "files.associations": {
+        "*.H": "c",
+        "*.h": "c",
+        "*.C": "c",
+        "*.c": "c"
+    }
+}

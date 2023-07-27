@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "./.vscode/compile.bat",
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "./.vscode/compile.bat",
+            "args": [
+                "cleanOnly"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build & run",
+            "type": "shell",
+            "command": "./.vscode/compile.bat",
+            "args": [
+                "alsoRun"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build & run (mednafen)",
+            "type": "shell",
+            "command": "./.vscode/compile.bat",
+            "args": [
+                "alsoRun",
+                "mednafen"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "./.vscode/compile.bat\"",
+            "args": [
+                "run"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run (mednafen)",
+            "type": "shell",
+            "command": "./.vscode/compile.bat",
+            "args": [
+                "run",
+                "mednafen"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
