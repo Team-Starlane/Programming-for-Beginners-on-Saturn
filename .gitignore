@@ -13,6 +13,7 @@ game.bin
 game.raw
 game.cue
 cd/0.bin
+*/cd/0.bin
 
 # Linker output
 *.ilk
