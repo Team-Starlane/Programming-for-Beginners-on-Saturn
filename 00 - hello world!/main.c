@@ -49,34 +49,12 @@ void	my_draw(void)
 
 /************************************************
  * @brief
- * In this last function, the main function
- * aka the program entry point, the actual 
- * execution of the program is organized.
- * 
- * This is done, by either calling on predefined
- * functions inside the library (or later on 
- * libraries, plural), we are using or by calling
- * on functions, we defined above.
- * 
- * In this case there is only one function we wrote
- * ourselves, the mydraw function,
- * which displays Hello World! on screen.
- * 
- * The two other functions, encasing mydraw,
- * are jo_core_init and jo_core_run.
- * 
- * I do not know, what the first functions sets up
- * in detail. But it is needed at the start of every
- * main loop inside the Jo Engine SDK.
- * 
- * The parameter it takes is a color value,
- * in this case predefined by a #define statement
- * inside the jo library.
- * 
- * There is a list of predefined colors, inside
- * jo, that you can use. In this case Black.
- * 
- * It sets the background layer to that color.
+ * Always use the predefined jo_main function as
+ * your main function and start it with jo_core_init
+ * and end it with jo_core_run. Put game code in
+ * between. Add jo_core_add_callback functions,
+ * if you need the function to run continuously
+ * every frame (like your draw function.
  ***********************************************/
 void	jo_main(void)
 {
