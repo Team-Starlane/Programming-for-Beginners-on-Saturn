@@ -71,13 +71,8 @@ void	jo_main(void)
  * 
  * https://jo-engine.org/doxygen/colors_8h.html
  * 
- * Try what happens, if you compile with
+ * See what happens, if you compile with
  * JO_COLOR_White.
- * 
- * Remember to type the color exactly, how it is
- * written and stay inside the brackets.
- * C is case sensitive.
- * Also don't add any spaces or any other nonesense.
  ***********************************************/
 
 /*
