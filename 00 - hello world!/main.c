@@ -27,56 +27,20 @@
 */
 
 /************************************************
- * This is a standard setup for a game loop i.e.
- * programs in general.
- * 
- * The contents of a standard library are included
- * at the point of the include directive
- * (you might know stdio.h, standard input output,
- * from other C tutorials).
- * 
- * This means, we can use all functions predefined
- * in that library.
- * 
- * Since we are using Jo-Engine, this is what we
- * include via the specified header file (a filetype
- * used to link up to a bunch of other files).
- * 
- * Later there will be also the option, to include
- * entire libraries or just files with c code
- * (like the main.c file, you are reading right now)
- * to make the entire coding process more maneagable
- * and not have all your code in one single file.
+ * @brief
+ * The SDK itself. Include libraries in your
+ * project folder with "quotes".
+ *
+ * The filepath called by the <angle brackets>
+ * is specified in the make file:
+ * JO_ENGINE_SRC_DIR=../../jo_engine
  ***********************************************/
 #include <jo/jo.h>
 
 /************************************************
  * @brief
- * Secondly we define the drawing code
- * aka the code that displays images / text etc. pp.
- * on screen (draws them).
- * 
- * There is no actual game logic as of yet,
- * so this is all that will be called from
- * the main function / program entry point.
- * 
- * The game logic being e.g the mathematical
- * calculations that makes your game character move
- * on screen, when you input button commands
- * or the physics inside the game world like gravity
- * projectiles etc. pp.
- * 
- * All it does for now is print the string "Hello world!"
- * on screen.
- * 
- * Print meaning displaying it on screen.
- * 
- * Print is a legacy term from a time,
- * when there were few actual computer displays
- * and your printer would physically print
- * out, what you wrote on your keyboard,
- * so you could see, what the computer was doing
- * (no, I am not kidding).
+ * Main draw function. Called every frame through
+ * jo_core_add_callback function in the main loop.
  ***********************************************/
 void	my_draw(void)
 {
