@@ -10,4 +10,6 @@ Johannes has designed a very useful SDK, which is very beginner friendly and eas
 With this SDK it is possible to hit the ground running, especially if you have previous<br>
 coding experience.
 
-You will find the tutorial inside this repositories > wiki <
+You will find the tutorial inside this repositories wiki:
+
+https://github.com/Team-Starlane/Programming-for-Beginners-on-Saturn/wiki
