@@ -27,70 +27,20 @@
 */
 
 /************************************************
- * As usual we start by including our SDK's
- * library, so we can use its functions.
- * 
- * There won't be any further includes
- * until we get to much more advanced tutorials. 
+ * @brief
+ * The SDK itself. Include libraries in your
+ * project folder with "quotes".
+ *
+ * The filepath called by the <angle brackets>
+ * is specified in the make file:
+ * JO_ENGINE_SRC_DIR=../../jo_engine
  ***********************************************/
 #include <jo/jo.h>
 
 /************************************************
- * Let's look at introducing some variables instead.
- * 
- * In laymens terms. The computer needs numbers,
- * it can do math with, right?
- * 
- * It needs to write them down or store them
- * somewhere.
- * 
- * These are the variables we will look.
- * They're called variables, because well,
- * they can change their value.
- * 
- * There is three types of things,
- * you can do with a variable.
- * 
- * First you can "declare" a variable,
- * basically telling the computer,
- * you'd like a variable,
- * what type you'd like it to be,
- * and what its name is.
- * 
- * Let's do that now.
- ***********************************************/
-
-int foo;
-
-/************************************************
- * This is foo, your variable. The name is arbitrary,
- * you need it to refer to your variable later.
- * 
- * Just be mindful of the naming conventions
- * for variables (no spaces etc. pp.).
- * You will find those online. 
- * 
- * Its type is int(eger), the most common type.
- * As the name suggest it is a whole number.
- * It doesn't do fractions. So 1, 2, 3 are all ok.
- * 3.141 is not. We will get to how to do fractions later.
- * 
- * Using only whole numbers is useful, because the
- * a computer can calculate with them much faster,
- * so your game slows down less.
- * 
- * Let's ask for another.
- * Let's "initialize" the variable this time aka,
- * give it an actual value.
- * foo doesn't have a value yet for example.
- ***********************************************/
-
-int bar = 1;
-
-bool shroedinger = FALSE;
-
-/************************************************
  * @brief
+ * Main draw function. Called every frame through
+ * jo_core_add_callback function in the main loop.
  ***********************************************/
 void	my_draw(void)
 {
@@ -99,12 +49,12 @@ void	my_draw(void)
 
 /************************************************
  * @brief
- * Here we have the main function again.
- * Nothing has changed and most likely won't
- * in the following tutorials.
- * 
- * We will just update, what the Saturn should
- * draw on screen in the mydraw function.
+ * Always use the predefined jo_main function as
+ * your main function and start it with jo_core_init
+ * and end it with jo_core_run. Put game code in
+ * between. Add jo_core_add_callback functions,
+ * if you need the function to run continuously
+ * every frame (like your draw function.
  ***********************************************/
 void	jo_main(void)
 {
@@ -115,6 +65,14 @@ void	jo_main(void)
 
 /************************************************
  * Things to try for yourself:
+ * 
+ * Here's a long list of colors you can replace
+ * JO_COLOR_Black with. Have fun:
+ * 
+ * https://jo-engine.org/doxygen/colors_8h.html
+ * 
+ * See what happens, if you compile with
+ * JO_COLOR_White.
  ***********************************************/
 
 /*
