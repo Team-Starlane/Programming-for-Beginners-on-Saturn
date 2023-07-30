@@ -27,56 +27,70 @@
 */
 
 /************************************************
- * This is a standard setup for a game loop i.e.
- * programs in general.
+ * As usual we start by including our SDK's
+ * library, so we can use its functions.
  * 
- * The contents of a standard library are included
- * at the point of the include directive
- * (you might know stdio.h, standard input output,
- * from other C tutorials).
- * 
- * This means, we can use all functions predefined
- * in that library.
- * 
- * Since we are using Jo-Engine, this is what we
- * include via the specified header file (a filetype
- * used to link up to a bunch of other files).
- * 
- * Later there will be also the option, to include
- * entire libraries or just files with c code
- * (like the main.c file, you are reading right now)
- * to make the entire coding process more maneagable
- * and not have all your code in one single file.
+ * There won't be any further includes
+ * until we get to much more advanced tutorials. 
  ***********************************************/
 #include <jo/jo.h>
 
 /************************************************
+ * Let's look at introducing some variables instead.
+ * 
+ * In laymens terms. The computer needs numbers,
+ * it can do math with, right?
+ * 
+ * It needs to write them down or store them
+ * somewhere.
+ * 
+ * These are the variables we will look.
+ * They're called variables, because well,
+ * they can change their value.
+ * 
+ * There is three types of things,
+ * you can do with a variable.
+ * 
+ * First you can "declare" a variable,
+ * basically telling the computer,
+ * you'd like a variable,
+ * what type you'd like it to be,
+ * and what its name is.
+ * 
+ * Let's do that now.
+ ***********************************************/
+
+int foo;
+
+/************************************************
+ * This is foo, your variable. The name is arbitrary,
+ * you need it to refer to your variable later.
+ * 
+ * Just be mindful of the naming conventions
+ * for variables (no spaces etc. pp.).
+ * You will find those online. 
+ * 
+ * Its type is int(eger), the most common type.
+ * As the name suggest it is a whole number.
+ * It doesn't do fractions. So 1, 2, 3 are all ok.
+ * 3.141 is not. We will get to how to do fractions later.
+ * 
+ * Using only whole numbers is useful, because the
+ * a computer can calculate with them much faster,
+ * so your game slows down less.
+ * 
+ * Let's ask for another.
+ * Let's "initialize" the variable this time aka,
+ * give it an actual value.
+ * foo doesn't have a value yet for example.
+ ***********************************************/
+
+int bar = 1;
+
+bool shroedinger = FALSE;
+
+/************************************************
  * @brief
- * Secondly we define the drawing code
- * aka the code that displays images / text etc. pp.
- * on screen (draws them).
- * 
- * There is no actual game logic as of yet,
- * so this is all that will be called from
- * the main function / program entry point.
- * 
- * The game logic being e.g the mathematical
- * calculations that makes your game character move
- * on screen, when you input button commands
- * or the physics inside the game world like gravity
- * projectiles etc. pp.
- * 
- * All it does for now is print the string "Hello world!"
- * on screen.
- * 
- * Print meaning displaying it on screen.
- * 
- * Print is a legacy term from a time,
- * when there were few actual computer displays
- * and your printer would physically print
- * out, what you wrote on your keyboard,
- * so you could see, what the computer was doing
- * (no, I am not kidding).
  ***********************************************/
 void	my_draw(void)
 {
@@ -85,34 +99,12 @@ void	my_draw(void)
 
 /************************************************
  * @brief
- * In this last function, the main function
- * aka the program entry point, the actual 
- * execution of the program is organized.
+ * Here we have the main function again.
+ * Nothing has changed and most likely won't
+ * in the following tutorials.
  * 
- * This is done, by either calling on predefined
- * functions inside the library (or later on 
- * libraries, plural), we are using or by calling
- * on functions, we defined above.
- * 
- * In this case there is only one function we wrote
- * ourselves, the mydraw function,
- * which displays Hello World! on screen.
- * 
- * The two other functions, encasing mydraw,
- * are jo_core_init and jo_core_run.
- * 
- * I do not know, what the first functions sets up
- * in detail. But it is needed at the start of every
- * main loop inside the Jo Engine SDK.
- * 
- * The parameter it takes is a color value,
- * in this case predefined by a #define statement
- * inside the jo library.
- * 
- * There is a list of predefined colors, inside
- * jo, that you can use. In this case Black.
- * 
- * It sets the background layer to that color.
+ * We will just update, what the Saturn should
+ * draw on screen in the mydraw function.
  ***********************************************/
 void	jo_main(void)
 {
@@ -123,19 +115,6 @@ void	jo_main(void)
 
 /************************************************
  * Things to try for yourself:
- * 
- * Here's a long list of colors you can replace
- * JO_COLOR_Black with. Have fun:
- * 
- * https://jo-engine.org/doxygen/colors_8h.html
- * 
- * Try what happens, if you compile with
- * JO_COLOR_White.
- * 
- * Remember to type the color exactly, how it is
- * written and stay inside the brackets.
- * C is case sensitive.
- * Also don't add any spaces or any other nonesense.
  ***********************************************/
 
 /*
